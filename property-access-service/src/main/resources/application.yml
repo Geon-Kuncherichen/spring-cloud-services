@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: property-access-service
+
+  profiles:
+    active:
+    - dev
+#  cloud:
+#    config:
+#      enabled: true
+      
+#  config:
+#    import:
+#    - http://localhost:8888
+server:
+  port: ${port:8100}
+  
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - refresh

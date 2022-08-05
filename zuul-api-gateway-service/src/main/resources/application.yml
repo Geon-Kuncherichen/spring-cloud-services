@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: zuul-api-gateway-service
+    
+server:
+  port: ${port:8765}
+
+  
+zuul:
+  routes:
+    product-enquiry: /product/**
+    url: product-enquiry-service
